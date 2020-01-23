@@ -1,12 +1,18 @@
 <!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
 <html lang="en">
+<!--<![endif]-->
 
 <head>
-    <title>How to use Room database and migration for version upgrade</title>
+    <title>Apk or App bundle generation using command line</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Website Landing Page for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
     <link rel="shortcut icon" href="favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -15,163 +21,126 @@
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
 
+    <!-- github calendar css -->
+    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css" />
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <div class="blog-content pull-left">
-                <h1 class="title">How to use Room database and migration for version upgrade</h1>
+            <div class="profile-content pull-left">
+                <h1 class="name">Apk or App bundle generation using command line</h1>
             </div>
         </div>
+        <!--//container-->
     </header>
 
     <div class="container sections-wrapper">
         <div class="content">
-            <p>
-                Google introduced room persistence library in google io 2018. Room library is very helpful for developer who use sqlite for local database in android. It's layer over sqlite which makes writing databse code easy and simple. But when we need to change
-                any table or add new table we need to write migration code. Little bit about how to use room.
-            </p>
-            <p>
-                We write every table as entity like if you want to create a student record table then you can create it as
-            </p>
+            <p>Sharing the apk with tester is one of the important task in our build cycle. Whenever a new feature is introduce in our app, we need to test it immediately and since anyone can generate apk to share, we needed to setup a process to share a
+                common apk. So we decided to generate signed apk for debug version, so that tester don't have to uninstall app every time and also we can share apk using common medium. Since sometimes gradle build times take lots of time we decided to
+                use gradle script using gradlew to generate apk.</p>
+            <p>First ceate keystore file using android studio. You can create it from build -> generate signed apk. You will get option to generate keystore file.<br>After that create a .properties file and add the info as shown below.</p>
+            <ul>
+                <li>
+                    <b class="store-file">
+                        <span class="title"><strong>storeFile = keystore.jks</strong></span>
+                    </b>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <b class="store-password">
+                        <span class="title"><strong>storePassword= keystore password</strong></span>
+                    </b>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <b class="key-alias">
+                        <span class="title"><strong>keyAlias= key alias</strong></span>
+                    </b>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <b class="key-password">
+                        <span class="title"><strong>keyPassword= key password</strong></span>
+                    </b>
+                </li>
+            </ul>
+            <p>Read these data from properties file in gradle</p>
             <pre>
-                <code class="enity-code">
-                    @Entity(primaryKeys = "id") //if you want to use multiple primary keys then you have to define it here. like primaryKeys = ["id","secondId"]
-                    //By default class name is use as table name but if you want to give nay particular name to table you can use tableName = "name_you_want" like 
-                    //@Entity(primaryKeys = "id", tableName = "name_you_want")
-                    data class Student{
-                       //if there is single primary key you can define it with column name like @PrimaryKey val id: String then there is no need to define primary 
-                       //on top of class name i.e with entity
-                       val id: String,
-                       val name: String,
-                       val roll: String,
-                       val class: String,
-                       val section: String
+                <code class="read-properties-file">
+                    android{
+                        signingConfigs {
+                           //you read diiferent properties according to different flavours
+                           flavour_name_sign_config {
+                           def propsFile = rootProject.file('keystore.properties')
+                           if (propsFile.exists()) {
+                                def props = new Properties()
+                                props.load(new FileInputStream(propsFile))
+                                storeFile = file(props['storeFile'])
+                                storePassword = props['storePassword']
+                                keyAlias = props['keyAlias']
+                                keyPassword = props['keyPassword']
+                            }
+                       }
                     }
                 </code>
             </pre>
-            <p>
-                If you want to use any custom class like ArrayList in your entity then use type converter to save it in room. Using TypConverter room convert custom class in json string and save it in databse and when queried then again convert this json string into
-                custom class. TypeConvert class use Gson for that
-            </p>
-            <p>
-                <pre>
-                    <code>
-                        class ListConverter{
-                        @TypeConverter
-                        fun toArrayList(listString: String): ArrayList<String> {
-                            val listStringType = object : TypeToken<ArrayList<String>>() {}.type
-                                return Gson().fromJson(listString, listStringType)
-                            }
-                                                        
-                        @TypeConverter
-                        fun fromMapGroupInfo(list: ArrayList<String>): String {
-                            val gson = Gson()
-                                return gson.toJson(list)
-                        }
+            <p>But to use these values we have to use signingConfigs in productFlavors</p>
+            <pre>
+                <code class = "gradle-file-code">
+                    productFlavors{
+                       flavour_name{
+                         signingConfig signingConfigs.flavour_name_sign_config
+                       }
                     }
-                    </code>
-                </pre>
-                <br>and use this type converter in entity <pre><code>@TypeConverters(ListConverter::class) val idList: List<String></String></code></pre>
-            </p>
-            <P>
-                Then we need to create a dao class to do operation on this table. We write all the queries in this class. for example
-                <pre>
-                    <code>
-                        @Dao
-                        interface StudentDao{
-                           //if you want to handle conflict like if you insert the row with primary key already present in app then you can use
-                           //  conflict strategy like @Insert(onConflict = OnConflictStrategy.IGNORE) IGNORE mean row will not be inserted and REPLACE 
-                           //  means row will replace by this new row.
-                           @Insert
-                           fun insertStudents(student: Student)
-                        
-                           @Query("SELECT * FROM Student") //Student is table name so if you have defined your table name explicitly in entity using tableName 
-                           //then you have to use that name.
-                            fun selectAllStudents(): List<Student>
-                        }
-                    </code>
-                </pre>
-            </P>
-            <p>
-                The class, where we initialize room with all information like database name and which contain information like all the tables present in app and abstract method to access the dao class so that we can use query written in that dao, extends RoomDatabse
-                class.
-                <pre>
-                    <code>
-                        @Database(entities = {Student::class.java,...}, version = version_of_database(int value), exportSchema = false) 
-                        //exportSchema means you want to keep track version history of our tables or not.
-                        //if any type converter present then have to mention that
-                        @TypeConverters({ListConverter::class.java})
-                        public abstract class AppDatabse: RoomDatabase{
-                           public abstract StudentDao studentDao();
-                           companion object {
-                              @JvmStatic
-                              var instance: AppDatabase? = null
-                              private set
-                        
-                              //call it from application to save memory leak problem.
-                              fun initInstance(application: Application) {
-                                 if (instance == null) {
-                                   instance = Room.databaseBuilder(application.applicationContext, AppDatabase::class.java, //your database name).build()
-                                 }
-                              }
-                           }
-                        }
-                    </code>
-                </pre>
-            </p>
-            <p>
-                Initialize room in onCreate in application class in android
-                <pre>
-                    <code>
-                        AppDatabase.initInstance(this)
-                    </code>
-                </pre>
-            </p>
-            <p>
-                If you want to make change in database which is already present in users android phone memory then you have to write migration so that it does not affect old tables. It's better to keep all migration code in one class so that you can manage it easily.
-            </p>
-            <p>
-                Let's we want to add table student in out database with column id(String type, Priamry key), class(int, non null), section(String, non null), point(float, non null)
-                <pre>
-                    <code>
-                        public class DatabaseMigration{
-                           companion object{
-                             //use variable name such that it give information about migration version change from and to
-                             val migration_1_2 = object : Migration(1,2){
-                               override fun migrate(database: SupportSQLiteDatabase){
-                                  database.execSQL("CREATE TABLE Student (id TEXT NOT NULL, class INTEGER NOT NULL, section TEXT NOT NULL, point REAL NOT NULL, 
-                                  PRIMARY KEY(id))")
-                                }
-                            }
-                          }
-                        }
-                        Note: Since Custom class is saved using type converter and room database save it after converting it to json string so it is TEXT data type.
-                    </code>
-                </pre>
-            </p>
-            <p>
-                and then add migration when you initialize room
-                <pre>
-                    <code>
-                        instance = Room.databaseBuilder(application.applicationContext, AppDatabase::class.java, Strings.DATABASE_NAME //your database name)
-                        .addMigration(DatabaseMigration.migration_1_2).build()
-                    </code>
-                </pre>
-            </p>
-            <p>
-                If you want to update table like add column or drop column then alter table like
-                <pre>
-                    <code>
-                        database.execSQL("ALTER TABLE table_name ADD COLUMN column_name") OR database.execSQL("ALTER TABLE table_name DROP COLUMN column_name")
-                    </code>
-                </pre>
-            </p>
+                </code>
+            </pre>
+            <p>Now to generate apk or bundle run script in terminal like</p>
+            <pre>
+                <code class = "script-code-apk">
+                    ./gradlew bundleDebug or ./gradlew bundleDevDebug
+                </code>
+            </pre>
+            <ul>
+                <li>
+                    <b class="bundle-run">
+                        If you want to generate app bundle then
+                    </b>
+                </li>
+            </ul>
+            <pre>
+                <code class = "script-code-bundle">
+                    ./gradlew bundleDebug or ./gradlew bundleDevDebug
+                </code>
+            </pre>
+            <ul>
+                <li>
+                    <b class="apk-install">
+                        You can also install app in connected device using script
+                    </b>
+                </li>
+            </ul>
+            <pre>
+                <code class ="script-install-apk">
+                    ./gradlew installDebug
+                </code>
+            </pre>
         </div>
     </div>
 </body>
