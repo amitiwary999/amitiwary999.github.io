@@ -33,11 +33,11 @@
     <div class="container sections-wrapper">
         <div class="content">
             <p>
-                Google introduced room persistence library in google io 2018. Room library is very helpful for developer who use sqlite for local database in android. It's layer over sqlite which makes writing databse code easy and simple. But when we need to change
-                any table or add new table we need to write migration code. Little bit about how to use room.
+                Google introduced room persistence library in google io 2017. Room library is very helpful for developer who use sqlite for local database in android. It is layer over sqlite which makes writing databse code easy and simple. This blog post is about how
+                to use room and what to do in case of complex situation. Let's start with how to use room.
             </p>
             <p>
-                We write every table as entity like if you want to create a student record table then you can create it as
+                We write every table as entity, so if you want to create a student record table then you can create it as
             </p>
             <pre><code class="blog-code">
             @Entity(primaryKeys = "id") //if you want to use multiple primary keys then you have to define it here. like primaryKeys = ["id","secondId"]
@@ -53,8 +53,8 @@
             }
             </code></pre>
             <p>
-                If you want to use any custom class like ArrayList in your entity then use type converter to save it in room. Using TypConverter room convert custom class in json string and save it in databse and when queried then again convert this json string into
-                custom class. TypeConvert class use Gson for that
+                If you want to use any custom class like ArrayList in your entity then use TypConverter to save it in room. Using TypConverter room convert custom class in json string and save it in databse and when we query then it convert this json string into custom
+                class. We use Gson for that.
             </p>
             <p>
                 <pre>
@@ -98,7 +98,7 @@
             </P>
             <p>
                 The class, where we initialize room with all information like database name and which contain information like all the tables present in app and abstract method to access the dao class so that we can use query written in that dao, extends RoomDatabse
-                class.
+                class. We are using single instance of room(singleton). There is no use of initializing room every time.
                 <pre>
                     <code>
                         @Database(entities = {Student::class.java,...}, version = version_of_database(int value), exportSchema = false) 
@@ -124,7 +124,7 @@
                 </pre>
             </p>
             <p>
-                Initialize room in onCreate in application class in android
+                Since we are using a single instance of room, so initialize room in onCreate in application class in android.
                 <pre>
                     <code>
                         AppDatabase.initInstance(this)
@@ -132,7 +132,7 @@
                 </pre>
             </p>
             <p>
-                If you want to make change in database which is already present in users android phone memory then you have to write migration so that it does not affect old tables. It's better to keep all migration code in one class so that you can manage it easily.
+                If you want to make change in database which is already present in users android phone memory then you have to write migration so that it does not affect old tables. It's better to keep all the migration code in one class so that you can manage it easily.
             </p>
             <p>
                 Let's we want to add table student in out database with column id(String type, Priamry key), class(int, non null), section(String, non null), point(float, non null)
@@ -149,7 +149,7 @@
                             }
                           }
                         }
-                        Note: Since Custom class is saved using type converter and room database save it after converting it to json string so it is TEXT data type.
+                        Note: Since Custom class is saved using TypeConverter and room database save it after converting it to json string so it is TEXT data type.
                     </code>
                 </pre>
             </p>
