@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.row {
+  display: inline;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.profile_container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile_name_social{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socila_accounts {
+  flex-direction: row;
+}
+
+.profile_image {
+  margin: 30px;
+  height: 180px;
+  width: 180px;
+}
+
+h1 {
+  font-family: 'archia';
+  font-size: 24px !important;
+  margin: 0px;
+}
+
+h2 {
+  font-family: 'archia';
+  font-size: 18px !important;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'archia';
+  font-size: 14px !important;
+  margin: 0px;
+}
+
+h4 {
+  font-family: 'archia';
+  font-size: 13px !important;
+  font-weight: 900;
+}
+
+h5 {
+  font-family: 'archia';
+  font-size: 12px !important;
+  font-weight: 900;
+}
+
+h6 {
+  font-family: 'archia';
+  font-size: 11px !important;
+  font-weight: 600;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
