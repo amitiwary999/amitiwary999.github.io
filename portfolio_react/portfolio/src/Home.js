@@ -9,7 +9,10 @@ function Home(props) {
                 <img src={image} className="profile_image" />
                 <div className="profile_name_social">
                     <h1>Amit Tiwary</h1>
-                    <h3 style={{ color: 'grey' }}>Android Developer</h3>
+                    <h3 style={{ color: 'grey' }}>Software Engineer</h3>
+                    <div className="social_accounts">
+
+                    </div>
                 </div>
             </div>
         </div>

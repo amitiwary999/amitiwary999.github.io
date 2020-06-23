@@ -26,6 +26,17 @@ body {
   background-color: black;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #778492;
+}
+
 .row {
   display: inline;
 }
@@ -48,6 +59,13 @@ body {
   justify-content: center;
 }
 
+.name {
+    color: #49515a;
+    font-size: 38px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
 .socila_accounts {
   flex-direction: row;
 }
@@ -56,42 +74,6 @@ body {
   margin: 30px;
   height: 180px;
   width: 180px;
-}
-
-h1 {
-  font-family: 'archia';
-  font-size: 24px !important;
-  margin: 0px;
-}
-
-h2 {
-  font-family: 'archia';
-  font-size: 18px !important;
-  font-weight: 400;
-}
-
-h3 {
-  font-family: 'archia';
-  font-size: 14px !important;
-  margin: 0px;
-}
-
-h4 {
-  font-family: 'archia';
-  font-size: 13px !important;
-  font-weight: 900;
-}
-
-h5 {
-  font-family: 'archia';
-  font-size: 12px !important;
-  font-weight: 900;
-}
-
-h6 {
-  font-family: 'archia';
-  font-size: 11px !important;
-  font-weight: 600;
 }
 
 .App-header {
