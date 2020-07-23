@@ -18,29 +18,6 @@ html {
   width: 100vw;
 }
 
-body {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #778492;
-}
-
-.row {
-  display: inline;
-}
-
 .container {
   width: 100%;
   height: 100%;
@@ -66,8 +43,27 @@ h6 {
     margin-top: 30px;
 }
 
-.socila_accounts {
-  flex-direction: row;
+.socila_accounts{
+flex-direction: row;
+}
+
+.social_href_tag{
+    background: #b0b7bf;
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
 }
 
 .profile_image {
