@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import image from "./media/amit_img.png"
+import image from '../media/amit_img.png'
 import './home.scss'
 
 function Home(props) {
@@ -10,29 +10,23 @@ function Home(props) {
           <div className="col-8 text-center">
             <div className="row">
               <img src={image} className="profile_image" />
-              <div className="col">
+              <div className="col my-auto">
                 <h1 className="text-left">Amit Tiwary</h1>
                 <div className="row">
-               
-                    <a className="social" href="https://twitter.com/Tiwarya9Amit">
-                      <i class="fa fa-twitter"></i>
+                  <div className="social-list">
+                    <a className="social p-1" href="https://twitter.com/Tiwarya9Amit">
+                      <i className="fa fa-twitter"></i>
                     </a>
-           
-            
-                    <a href="https://linkedin.com/in/amit-tiwary-8bb081103/">
+                    <a className="social p-1 ml-1" href="https://linkedin.com/in/amit-tiwary-8bb081103/">
                       <i className="fa fa-linkedin"></i>
-                    </a>
-                 
-                  
-                    <a href="https://github.com/amitiwary999">
+                    </a>                                  
+                    <a className="social p-1 ml-1" href="https://github.com/amitiwary999">
                       <i className="fa fa-github"></i>
-                    </a>
-               
-               
-                    <a href="https://stackoverflow.com/users/5216062/amit-tiwary">
+                    </a>              
+                    <a className="social p-1 ml-1" href="https://stackoverflow.com/users/5216062/amit-tiwary">
                       <i className="fa fa-stack-overflow"></i>
                     </a>
-              
+                  </div>            
                 </div>
               </div>
             </div>
