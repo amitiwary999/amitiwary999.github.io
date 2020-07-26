@@ -7,9 +7,9 @@ function Home(props) {
     return (
       <div className="container-fluid">
         <div className="row pt-5 pb-5">
-          <div className="col-8 text-center">
+          <div className=" col-md-8 text-center">
             <div className="row">
-              <img src={image} className="profile_image" />
+              <img src={image} className="profile-image img-responsive" />
               <div className="col my-auto">
                 <h1 className="text-left">Amit Tiwary</h1>
                 <div className="row">
@@ -32,7 +32,7 @@ function Home(props) {
             </div>
           </div>
           <div className="col-4 text-center">
-            <img src={image} className="profile_image" />
+            <img src={image} className="profile-image" />
           </div>
         </div>
       </div>

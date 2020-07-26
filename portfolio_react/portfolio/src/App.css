@@ -66,11 +66,6 @@ flex-direction: row;
     text-align: center;
 }
 
-.profile_image {
-  margin: 30px;
-  height: 180px;
-  width: 180px;
-}
 
 .App-header {
   background-color: #282c34;
