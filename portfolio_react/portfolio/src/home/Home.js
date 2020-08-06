@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import image from '../media/amit_img.png'
 import wallofufame from '../media/projects/wallofufame.png'
+import CutSong from '../media/projects/cutsong.png'
+import ImageConverter from '../media/projects/imageconverter.jpg'
 import { Link, Mail, MapPin} from 'react-feather'
 import './home.scss'
 
 function Home(props) {
 
     return (
-      <div className="container">
+      <div className="ml-4 mr-4">
         <div className="row pt-3 pb-3 pl-3 mb-3  bg-white">
-          <div className=" col-md-8 text-center">
+          <div className=" col-md-7 text-center">
             <div className="row">
               <img src={image} className="profile-image img-responsive" />
               <div className="col my-auto">
@@ -67,7 +69,64 @@ function Home(props) {
                 music or sort stories and watching stand-up comedy show
               </p>
             </div>
-            <div className="card mt-4 p-4">
+            <div className="card p-4">
+              <p className="sections-title">Latest Projects</p>
+              <div className="row">
+                <div className="col-sm-4">
+                  <img className="project-img" src={wallofufame} />
+                </div>
+                <div className="col-sm-8">
+                  <p className="job-title-header"> Wall-of-U-Fame</p>
+                  <p>
+                    An Android app for chating and posting some stuff. User can post pictures or text and can also chat with other users. They can like unlike each others post. User can chat and see post of user having mail id of same domain. So who used gmail id for creating account can chat and see post of user who also used gmail mail id for creating account.
+                    I used Firebase for storing users information, posts and chat.
+
+                    Note: I am devloping my owns server for this project using Node.js and MySql(WIP). So I am making some change in this project. And also I built a react native version of this app.
+                  </p>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-sm-4">
+                  <img className="project-img" src={wallofufame} />
+                </div>
+                <div className="col-sm-8">
+                  <p className="job-title-header"> Wall-of-U-Fame-Server</p>
+                  <p>
+                    This is backend code for my project Wall-of-U-Fame. I using Node.js and Mysql in this project
+                  </p>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-sm-4">
+                  <img className="project-img" src={CutSong} />
+                </div>
+                <div className="col-sm-8">
+                  <p className="job-title-header"> CutSong</p>
+                  <p>
+                    An Android app for creating ringtone. User can create ringtone either from a song present in mobile or user can record a voice in app and then create ringtone from it.
+                  </p>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-sm-4">
+                  <img className="project-img" src={ImageConverter} />
+                </div>
+                <div className="col-sm-8">
+                  <p className="job-title-header">ImageConverter</p>
+                  <p>
+                    An Android App to convert any image and .doc file to pdf and also any pdf file to image.
+                    The Android App lets user select multipe image file and made a single pdf file and also convert different page of pdf file in different image. I am working on this project, so currently it is private repository.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card p-4">
               <div className="row">
                 <MapPin />
                 <p className="ml-2">Bengaluru, Karnataka, India</p>
@@ -83,9 +142,6 @@ function Home(props) {
                 </a>
               </div>
             </div>
-          </div>
-
-          <div className="col-md-6">
             <div className="card p-4">
               <p className="sections-title">Work Experience</p>
               <p className="job-title-header">
@@ -134,25 +190,8 @@ function Home(props) {
                 Alongwith app, I also create some skills for SUSI.
               </p>
             </div>
-            <div className="card p-4">
-              <p className="sections-title">Latest Projects</p>
-              <div className="row">
-                <div className="col-sm-4">
-                  <img className="project-img" src={wallofufame} />
-                </div>
-                <div className="col-sm-8">
-                  <p className="job-title-header"> Wall-of-U-Fame</p>
-                  <p>
-                    An Android app for chating and posting some stuff. User can post pictures or text and can also chat with other users. They can like unlike each others post. User can chat and see post of user having mail id of same domain. So who used gmail id for creating account can chat and see post of user who also used gmail mail id for creating account.
-                    I used Firebase for storing users information, posts and chat.
-
-                    Note: I am devloping my owns server for this project using Node.js and MySql(WIP). So I am making some change in this project.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
       </div>
     );
 }
