@@ -3,6 +3,7 @@ import image from '../media/amit_img.png'
 import wallofufame from '../media/projects/wallofufame.png'
 import CutSong from '../media/projects/cutsong.png'
 import ImageConverter from '../media/projects/imageconverter.jpg'
+import Browser from '../media/projects/simple_browser.png'
 import { Link, Mail, MapPin} from 'react-feather'
 import './home.scss'
 
@@ -122,26 +123,22 @@ function Home(props) {
                   </p>
                 </div>
               </div>
+
+              <div className="row">
+                <div className="col-sm-4">
+                  <img className="project-img" src={Browser} />
+                </div>
+                <div className="col-sm-8">
+                  <p className="job-title-header">Browser App</p>
+                  <p>
+                    Browser App is a simple Android app using which user can browse some site and can also read daily news related to different category like sport, technology etc.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="col-md-4">
-            <div className="card p-4">
-              <div className="row">
-                <MapPin />
-                <p className="ml-2">Bengaluru, Karnataka, India</p>
-              </div>
-              <div className="row">
-                <Mail />
-                <p className="ml-2">tiwarya9@gmail.com</p>
-              </div>
-              <div className="row">
-                <Link />
-                <a className="ml-2" href="https://amitiwary999.github.io">
-                  amitiwary999.github.io
-                </a>
-              </div>
-            </div>
             <div className="card p-4">
               <p className="sections-title">Work Experience</p>
               <p className="job-title-header">
@@ -188,6 +185,27 @@ function Home(props) {
                 the app is to provide a conversational interface to provide
                 intelligent answers using the loklak/AskSusi infrastructure.
                 Alongwith app, I also create some skills for SUSI.
+              </p>
+            </div>
+            <div className="card p-4">
+              <div className="row">
+                <MapPin />
+                <p className="ml-2">Bengaluru, Karnataka, India</p>
+              </div>
+              <div className="row">
+                <Mail />
+                <p className="ml-2">tiwarya9@gmail.com</p>
+              </div>
+              <div className="row">
+                <Link />
+                <a className="ml-2" href="https://amitiwary999.github.io">
+                  amitiwary999.github.io
+                </a>
+              </div>
+            </div>
+            <div className="card p-4">
+              <p className="level-title">
+                Android
               </p>
             </div>
             </div>

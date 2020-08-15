@@ -47,6 +47,19 @@ body{
     height: auto;
 }
 
+.level-title {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Lato", arial, sans-serif;
+    position: absolute;
+}
+
+.level-bar {
+    height: 15px;
+    background: #e8e8e8;
+}
+
 // @media (max-width: 767px) {
 //     .profile-image {
 //         float: none !important;
