@@ -49,15 +49,19 @@ body{
 
 .level-title {
     color: #000000;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     font-family: "Lato", arial, sans-serif;
-    position: absolute;
 }
 
 .level-bar {
     height: 15px;
     background: #e8e8e8;
+}
+
+.level-bar-inner {
+    height: 15px;
+    background: #66cb8c;
 }
 
 // @media (max-width: 767px) {

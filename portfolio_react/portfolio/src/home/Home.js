@@ -99,7 +99,7 @@ function Home(props) {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-sm-4">
                   <img className="project-img" src={CutSong} />
                 </div>
@@ -111,7 +111,7 @@ function Home(props) {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-sm-4">
                   <img className="project-img" src={ImageConverter} />
                 </div>
@@ -124,7 +124,7 @@ function Home(props) {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-sm-4">
                   <img className="project-img" src={Browser} />
                 </div>
@@ -140,7 +140,7 @@ function Home(props) {
 
           <div className="col-md-4">
             <div className="card p-4">
-              <p className="sections-title">Work Experience</p>
+              
               <p className="job-title-header">
                 Software Engineer -{" "}
                 <span className="job-company-name">
@@ -204,9 +204,43 @@ function Home(props) {
               </div>
             </div>
             <div className="card p-4">
-              <p className="level-title">
+              <p className="sections-title">Skills</p>
+              <p className="level-title mb-1">
                 Android
               </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='85%' style={{width: '85%'}}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                Kotlin
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='75%' style={{ width: '75%' }}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                JAVA(Core)
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='75%' style={{ width: '75%' }}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                Node.Js
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='55%' style={{ width: '55%' }}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                React
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='50%' style={{ width: '50%' }}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                Python
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='35%' style={{ width: '35%' }}></div>
+              </div>
             </div>
             </div>
           </div>
