@@ -77,7 +77,7 @@ function Home(props) {
                   <img className="project-img" src={wallofufame} />
                 </div>
                 <div className="col-sm-8">
-                  <p className="job-title-header"> Wall-of-U-Fame</p>
+                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall-of-U-Fame">Wall-of-U-Fame</a>
                   <p>
                     An Android app for chating and posting some stuff. User can post pictures or text and can also chat with other users. They can like unlike each others post. User can chat and see post of user having mail id of same domain. So who used gmail id for creating account can chat and see post of user who also used gmail mail id for creating account.
                     I used Firebase for storing users information, posts and chat.
@@ -87,12 +87,12 @@ function Home(props) {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col-sm-4">
                   <img className="project-img" src={wallofufame} />
                 </div>
                 <div className="col-sm-8">
-                  <p className="job-title-header"> Wall-of-U-Fame-Server</p>
+                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall_Of_You_Fame_Server"> Wall-of-U-Fame-Server</a>
                   <p>
                     This is backend code for my project Wall-of-U-Fame. I using Node.js and Mysql in this project
                   </p>
@@ -104,7 +104,7 @@ function Home(props) {
                   <img className="project-img" src={CutSong} />
                 </div>
                 <div className="col-sm-8">
-                  <p className="job-title-header"> CutSong</p>
+                  <a className="job-title-header" href="https://github.com/amitiwary999/CutSong"> CutSong</a>
                   <p>
                     An Android app for creating ringtone. User can create ringtone either from a song present in mobile or user can record a voice in app and then create ringtone from it.
                   </p>
@@ -116,7 +116,7 @@ function Home(props) {
                   <img className="project-img" src={ImageConverter} />
                 </div>
                 <div className="col-sm-8">
-                  <p className="job-title-header">ImageConverter</p>
+                  <a className="job-title-header" href="https://github.com/amitiwary999/ImageConverter">ImageConverter</a>
                   <p>
                     An Android App to convert any image and .doc file to pdf and also any pdf file to image.
                     The Android App lets user select multipe image file and made a single pdf file and also convert different page of pdf file in different image. I am working on this project, so currently it is private repository.
@@ -129,7 +129,7 @@ function Home(props) {
                   <img className="project-img" src={Browser} />
                 </div>
                 <div className="col-sm-8">
-                  <p className="job-title-header">Browser App</p>
+                  <a className="job-title-header" href="https://github.com/amitiwary999/Simple_Android_Browser">Browser App</a>
                   <p>
                     Browser App is a simple Android app using which user can browse some site and can also read daily news related to different category like sport, technology etc.
                   </p>
