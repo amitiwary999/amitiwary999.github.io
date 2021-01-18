@@ -17,6 +17,7 @@ function Home(props) {
               <img src={image} className="profile-image img-responsive" />
               <div className="col my-auto">
                 <h1 className="text-md-left text-sm-center">Amit Tiwary</h1>
+                <h3 className="text-md-left" style={{color: 'grey'}}>Software Developer</h3>
                 <div className="row">
                   <div className="ml-md-2 mx-auto">
                     <a
@@ -54,8 +55,7 @@ function Home(props) {
             <div className="card p-4">
               <p className="sections-title">About Me</p>
               <p>
-                I am an Android Developer and have been in the field since over
-                two year and being an avid Open Source lover, the source code to
+                I am a Software Engineer. I am working as a backend developer, have two year of experience as an Android App Developer and being an avid Open Source lover, the source code to
                 most of my apps can be easily found on my GitHub. Currently, I
                 work at{" "}
                 <a href="https://www.linkedin.com/company/superproai/">
@@ -65,7 +65,7 @@ function Home(props) {
                 majoring in Computer Science and Engineering.
                 <br />
                 <br />
-                Apart from Android, I've also wrote some python script mainly
+                I've also wrote some python script mainly
                 related to webscraping. When I am not coding, I love to listen
                 music or sort stories and watching stand-up comedy show
               </p>
