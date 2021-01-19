@@ -77,12 +77,13 @@ function Home(props) {
                   <img className="project-img" src={wallofufame} />
                 </div>
                 <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall-of-U-Fame">Wall-of-U-Fame</a>
+                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall_Of_You_Fame_Server"> Famous_wall_Web</a>
                   <p>
-                    An Android app for chating and posting some stuff. User can post pictures or text and can also chat with other users. They can like unlike each others post. User can chat and see post of user having mail id of same domain. So who used gmail id for creating account can chat and see post of user who also used gmail mail id for creating account.
-                    I used Firebase for storing users information, posts and chat.
-
-                    Note: I am devloping my owns server for this project using Node.js and MySql(WIP). So I am making some change in this project. And also I built a react native version of this app.
+                    A website where user can post text or media post and have a video call with other users. They can like the post and request the other user for video call. Other user can accept the request and set a date and time for video call 
+                    or cancel the request. User has option to edit the profile and I used react-rte so that user can use different font and style in the description. User can request the video call from the other user profile. Authentication is required if user want to
+                    post something or make a video request.
+                    <br />
+                    <b>Note:</b> I used reactjs, redux, bootstrap to build website, jitsi for video call, firebase for authentication and eslint to configure coding style.
                   </p>
                 </div>
               </div>
@@ -94,7 +95,21 @@ function Home(props) {
                 <div className="col-sm-8">
                   <a className="job-title-header" href="https://github.com/amitiwary999/Wall_Of_You_Fame_Server"> Wall-of-U-Fame-Server</a>
                   <p>
-                    This is backend code for my project Wall-of-U-Fame. I using Node.js and Mysql in this project
+                    This is backend code for Famous_wall_Web and Wall-of-U-Fame. I used Node.js, express.js and mysql. It is deployed on google cloud app engine.
+                  </p>
+                </div>
+              </div>
+
+              <div className="row mt-2">
+                <div className="col-sm-4">
+                  <img className="project-img" src={wallofufame} />
+                </div>
+                <div className="col-sm-8">
+                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall-of-U-Fame">Wall-of-U-Fame</a>
+                  <p>
+                    This the android version of Famous_wall_Web website.
+
+                    Note: I am making some change in this project. And also I built a react native version of this app.
                   </p>
                 </div>
               </div>
@@ -152,9 +167,15 @@ function Home(props) {
                 </span>
               </p>
               <p>
-                I build the Real-time chat app from scratch using RxJava,
-                Kotlin, Android Jetpack library, Material design and some 3rd
-                party libraries. I am leading the Android developer team.
+                I worked on different technology here.
+                <li>
+                  I am working on frontend and backend of Superpro.ai. It's a SaaS platform with option to schedule a video call, send calendar invite or email and whatsapp message for scheduled meeting, payment( if user want to set some price for video call)
+                </li>
+                <li>
+                I build the Real-time chat app, ShutApp, from scratch using RxJava,
+                Kotlin, Android Jetpack library, Material design, build a scheduler to add offline support i.e user can send the message even if user is offline and 
+                scheduler send message once user comes online or retry to send failed messages.
+                </li>
               </p>
 
               <p className="job-title-header">
