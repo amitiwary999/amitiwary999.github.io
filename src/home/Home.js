@@ -21,12 +21,6 @@ function Home(props) {
                 <div className="row">
                   <div className="ml-md-2 mx-auto">
                     <a
-                      className="social p-1"
-                      href="https://twitter.com/Tiwarya9Amit"
-                    >
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                    <a
                       className="social p-1 ml-1"
                       href="https://linkedin.com/in/amit-tiwary-8bb081103/"
                     >
@@ -44,6 +38,12 @@ function Home(props) {
                     >
                       <i className="fa fa-stack-overflow"></i>
                     </a>
+                    <a
+                      className="social p-1 ml-1"
+                      href="https://dev.to/amitiwary999"
+                    >
+                      <i className="fa fa-blog"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -55,8 +55,7 @@ function Home(props) {
             <div className="card p-4">
               <p className="sections-title">About Me</p>
               <p>
-                I am a Software Engineer. I am working as a backend developer, have two year of experience as an Android App Developer and being an avid Open Source lover, the source code to
-                most of my apps can be easily found on my GitHub. Currently, I
+                I am a Software Engineer currently working as a backend developer. I have two year of experience as backend developer and 1 and half year experience as Android developer. Currently, I
                 work at{" "}
                 <a href="https://www.linkedin.com/company/superproai/">
                   Superpro.ai
@@ -65,7 +64,7 @@ function Home(props) {
                 majoring in Computer Science and Engineering.
                 <br />
                 <br />
-                I've also wrote some python script mainly
+                I've also wrote some python script mostly
                 related to webscraping. When I am not coding, I love to listen
                 music or sort stories and watching stand-up comedy show
               </p>
@@ -169,7 +168,7 @@ function Home(props) {
               <p>
                 I worked on different technology here.
                 <li>
-                  I am working on frontend and backend of Superpro.ai. It's a SaaS platform with option to schedule a video call, send calendar invite or email and whatsapp message for scheduled meeting, payment( if user want to set some price for video call)
+                  I am working on backend and Android App, Vayam. It's one stop platform to watch religious live stream, religious content and do virtual meeting.
                 </li>
                 <li>
                 I build the Real-time chat app, ShutApp, from scratch using RxJava,
