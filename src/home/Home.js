@@ -17,7 +17,7 @@ function Home(props) {
               <img src={image} className="profile-image img-responsive" />
               <div className="col my-auto">
                 <h1 className="text-md-left text-sm-center">Amit Tiwary</h1>
-                <h3 className="text-md-left" style={{color: 'grey'}}>Software Developer</h3>
+                <h3 className="text-md-left" style={{color: 'grey'}}>Senior Software Developer</h3>
                 <div className="row">
                   <div className="ml-md-2 mx-auto">
                     <a
@@ -55,120 +55,129 @@ function Home(props) {
             <div className="card p-4">
               <p className="sections-title">About Me</p>
               <p>
-                I am a Software Engineer currently working as a backend developer. I have two year of experience as backend developer and 1 and half year experience as Android developer. Currently, I
+                I am a Senior Software Engineer. I have 3 and half year of experience as backend developer and 1 and half year experience as an Android App developer. Currently, I
                 work at{" "}
-                <a href="https://www.linkedin.com/company/superproai/">
-                  Superpro.ai
+                <a href="https://www.arzooo.com/">
+                  Arzooo
                 </a>{" "}
-                as Software Engineer. I have done my B.Tech from MAKAUT, Kolkata
+                as Senior Software Engineer. I have done my B.Tech from MAKAUT, Kolkata
                 majoring in Computer Science and Engineering.
                 <br />
                 <br />
-                I've also wrote some python script mostly
-                related to webscraping. When I am not coding, I love to listen
+                When I am not coding, I love to write blogs, listen
                 music or sort stories and watching stand-up comedy show
               </p>
             </div>
             <div className="card p-4">
-              <p className="sections-title">Latest Projects</p>
               <div className="row">
-                <div className="col-sm-4">
-                  <img className="project-img" src={wallofufame} />
-                </div>
-                <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall_Of_You_Fame_Server"> Famous_wall_Web</a>
-                  <p>
-                    A website where user can post text or media post and have a video call with other users. They can like the post and request the other user for video call. Other user can accept the request and set a date and time for video call 
-                    or cancel the request. User has option to edit the profile and I used react-rte so that user can use different font and style in the description. User can request the video call from the other user profile. Authentication is required if user want to
-                    post something or make a video request.
-                    <br />
-                    <b>Note:</b> I used reactjs, redux, bootstrap to build website, jitsi for video call, firebase for authentication and eslint to configure coding style.
-                  </p>
-                </div>
+                <MapPin />
+                <p className="ml-2">Bengaluru, Karnataka, India</p>
               </div>
-
-              <div className="row mt-2">
-                <div className="col-sm-4">
-                  <img className="project-img" src={wallofufame} />
-                </div>
-                <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall_Of_You_Fame_Server"> Wall-of-U-Fame-Server</a>
-                  <p>
-                    This is backend code for Famous_wall_Web and Wall-of-U-Fame. I used Node.js, express.js and mysql. It is deployed on google cloud app engine.
-                  </p>
-                </div>
+              <div className="row">
+                <Mail />
+                <p className="ml-2">tiwarya9@gmail.com</p>
               </div>
-
-              <div className="row mt-2">
-                <div className="col-sm-4">
-                  <img className="project-img" src={wallofufame} />
-                </div>
-                <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/Wall-of-U-Fame">Wall-of-U-Fame</a>
-                  <p>
-                    This the android version of Famous_wall_Web website.
-
-                    Note: I am making some change in this project. And also I built a react native version of this app.
-                  </p>
-                </div>
+              <div className="row">
+                <Link />
+                <a className="ml-2" href="https://amitiwary999.github.io">
+                  amitiwary999.github.io
+                </a>
               </div>
-
-              <div className="row mt-2">
-                <div className="col-sm-4">
-                  <img className="project-img" src={CutSong} />
-                </div>
-                <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/CutSong"> CutSong</a>
-                  <p>
-                    An Android app for creating ringtone. User can create ringtone either from a song present in mobile or user can record a voice in app and then create ringtone from it.
-                  </p>
-                </div>
+            </div>
+            <div className="card p-4">
+              <p className="sections-title">Skills</p>
+              <p className="level-title mb-1">
+                Node.Js
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='85%' style={{ width: '85%' }}></div>
               </div>
-
-              <div className="row mt-2">
-                <div className="col-sm-4">
-                  <img className="project-img" src={ImageConverter} />
-                </div>
-                <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/ImageConverter">ImageConverter</a>
-                  <p>
-                    An Android App to convert any image and .doc file to pdf and also any pdf file to image.
-                    The Android App lets user select multipe image file and made a single pdf file and also convert different page of pdf file in different image. I am working on this project, so currently it is private repository.
-                  </p>
-                </div>
+              <p className="level-title mb-1 mt-3">
+                MySQL
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='75%' style={{width: '75%'}}></div>
               </div>
-
-              <div className="row mt-2">
-                <div className="col-sm-4">
-                  <img className="project-img" src={Browser} />
-                </div>
-                <div className="col-sm-8">
-                  <a className="job-title-header" href="https://github.com/amitiwary999/Simple_Android_Browser">Browser App</a>
-                  <p>
-                    Browser App is a simple Android app using which user can browse some site and can also read daily news related to different category like sport, technology etc.
-                  </p>
-                </div>
+              <p className="level-title mb-1 mt-3">
+                AWS
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='55%' style={{width: '55%'}}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                JAVA
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='55%' style={{ width: '55%' }}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                Android
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='55%' style={{width: '55%'}}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                React
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='40%' style={{ width: '50%' }}></div>
+              </div>
+              <p className="level-title mb-1 mt-3">
+                Python
+              </p>
+              <div className="level-bar">
+                <div className="level-bar-inner" data-level='35%' style={{ width: '35%' }}></div>
               </div>
             </div>
           </div>
 
           <div className="col-md-4">
             <div className="card p-4">
+
+            <p className="job-title-header">
+                Senior Software Engineer -{" "}
+                <span className="job-company-name">
+                  {" "}
+                  <a href="https://www.arzooo.com/">
+                    Arzooo
+                  </a>{" "}
+                  (june 2022 - present)
+                </span>
+              </p>
+              <p>
+                I work on different team here.
+                <li>
+                  My first project was with Catalogue team. I worked on moving the Catalogue service separate from the monolithic to handle the load. Catalogue serve the product listing, product details, pricing of product.
+                  This service get the <b>maximum load</b> because user comes to see the product first and then buy it. We moved to microservice and I created a middleware in Monolithic code to use the new Catalogue microservice to 
+                  communicate between the app and the monolithic backend. It helped us to release our microservice for a few users for testing with backward compatibility. It was released for 1000 user for test and it was a successful release.
+                </li>
+                <li>
+                  After that I worked on backend for the Arzooo app, B2B e-commerce. We give COD and partial pay option to few user and it is one of the feature that <b>drive growth and GMV</b>. I worked on
+                  revamp the logic so that business team can decide user and product on which COD and partial pay can be enabled and we can control the misuse of this feature. 
+                </li>
+                <li>
+                  My current project is{" "} <a href="https://gostor.com/">gostor</a>. It is a B2C e-commerce product.  I am working on Category and offer page curation. These pages use to show the 
+                  best offers on category and products so that user can find the offers easily and increase the chance of user <b>buying</b> the product. My responsibility is to create backend that can handle 
+                  the load when lots of user directly comes to this page and admin dashboard so that business team can manage these pages.
+                </li>
+              </p>
               
               <p className="job-title-header">
-                Software Engineer -{" "}
+                Senior Software Engineer -{" "}
                 <span className="job-company-name">
                   {" "}
                   <a href="https://www.linkedin.com/company/superproai/">
                     Superpro.ai
                   </a>{" "}
-                  (june 2018 - present)
+                  (june 2018 - june-2022)
                 </span>
               </p>
               <p>
-                I worked on different technology here.
+                I worked on different technology here. NodeJs, MySQL, Firebase, AWS, Kotlin, Android app development
                 <li>
-                  I am working on backend and Android App, Vayam. It's one stop platform to watch religious live stream, religious content and do virtual meeting.
+                  I worked on the backend and Android App,{" "} <a href="https://play.google.com/store/apps/details?id=com.vayam.app">Vayam</a>. It's one stop platform to watch religious live stream, religious content and do virtual meeting.
+                  Migrate our backend to microservice from monolithic using AWS EC2, Lambda and Amazon SQS tp support 20K people simultaneously in a live stream, send notification and update count of people
+                  watching live stream.
                 </li>
                 <li>
                 I build the Real-time chat app, ShutApp, from scratch using RxJava,
@@ -206,61 +215,6 @@ function Home(props) {
                 intelligent answers using the loklak/AskSusi infrastructure.
                 Alongwith app, I also create some skills for SUSI.
               </p>
-            </div>
-            <div className="card p-4">
-              <div className="row">
-                <MapPin />
-                <p className="ml-2">Bengaluru, Karnataka, India</p>
-              </div>
-              <div className="row">
-                <Mail />
-                <p className="ml-2">tiwarya9@gmail.com</p>
-              </div>
-              <div className="row">
-                <Link />
-                <a className="ml-2" href="https://amitiwary999.github.io">
-                  amitiwary999.github.io
-                </a>
-              </div>
-            </div>
-            <div className="card p-4">
-              <p className="sections-title">Skills</p>
-              <p className="level-title mb-1">
-                Android
-              </p>
-              <div className="level-bar">
-                <div className="level-bar-inner" data-level='85%' style={{width: '85%'}}></div>
-              </div>
-              <p className="level-title mb-1 mt-3">
-                Kotlin
-              </p>
-              <div className="level-bar">
-                <div className="level-bar-inner" data-level='75%' style={{ width: '75%' }}></div>
-              </div>
-              <p className="level-title mb-1 mt-3">
-                JAVA(Core)
-              </p>
-              <div className="level-bar">
-                <div className="level-bar-inner" data-level='75%' style={{ width: '75%' }}></div>
-              </div>
-              <p className="level-title mb-1 mt-3">
-                Node.Js
-              </p>
-              <div className="level-bar">
-                <div className="level-bar-inner" data-level='55%' style={{ width: '55%' }}></div>
-              </div>
-              <p className="level-title mb-1 mt-3">
-                React
-              </p>
-              <div className="level-bar">
-                <div className="level-bar-inner" data-level='50%' style={{ width: '50%' }}></div>
-              </div>
-              <p className="level-title mb-1 mt-3">
-                Python
-              </p>
-              <div className="level-bar">
-                <div className="level-bar-inner" data-level='35%' style={{ width: '35%' }}></div>
-              </div>
             </div>
             </div>
           </div>
