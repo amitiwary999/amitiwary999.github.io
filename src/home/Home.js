@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import image from '../media/amit_img.png'
-import wallofufame from '../media/projects/wallofufame.png'
-import CutSong from '../media/projects/cutsong.png'
-import ImageConverter from '../media/projects/imageconverter.jpg'
-import Browser from '../media/projects/simple_browser.png'
 import { Link, Mail, MapPin} from 'react-feather'
-import './home.scss'
+import './home.css'
 
 function Home(props) {
 
@@ -55,17 +51,17 @@ function Home(props) {
             <div className="card p-4">
               <p className="sections-title">About Me</p>
               <p>
-                I am a Senior Software Engineer. I have 3 and half year of experience as backend developer and 1 and half year experience as an Android App developer. Currently, I
+                I am a Senior Software Engineer with 5+ year of experience. Currently, I
                 work at{" "}
-                <a href="https://www.arzooo.com/">
-                  Arzooo
+                <a href="https://www.viacom18.com/">
+                  Viacom18, JioCinema team
                 </a>{" "}
-                as Senior Software Engineer. I have done my B.Tech from MAKAUT, Kolkata
+                as SDE 2. I have done my B.Tech from MAKAUT, Kolkata
                 majoring in Computer Science and Engineering.
                 <br />
                 <br />
                 When I am not coding, I love to write blogs, listen
-                music or sort stories and watching stand-up comedy show
+                music or sort stories.
               </p>
             </div>
             <div className="card p-4">
@@ -135,13 +131,13 @@ function Home(props) {
             <div className="card p-4">
 
             <p className="job-title-header">
-                Senior Software Engineer -{" "}
+                SDE 2 -{" "}
                 <span className="job-company-name">
                   {" "}
                   <a href="https://www.arzooo.com/">
                     Arzooo
                   </a>{" "}
-                  (june 2022 - present)
+                  (june 2022 - september 2023)
                 </span>
               </p>
               <p>
@@ -156,7 +152,7 @@ function Home(props) {
                   revamp the logic so that business team can decide user and product on which COD and partial pay can be enabled and we can control the misuse of this feature. 
                 </li>
                 <li>
-                  My current project is{" "} <a href="https://gostor.com/">gostor</a>. It is a B2C e-commerce product.  I am working on Category and offer page curation. These pages use to show the 
+                  My last project was{" "} <a href="https://gostor.com/">gostor</a>. It is a B2C e-commerce product.  I am working on Category and offer page curation. These pages use to show the 
                   best offers on category and products so that user can find the offers easily and increase the chance of user <b>buying</b> the product. My responsibility is to create backend that can handle 
                   the load when lots of user directly comes to this page and admin dashboard so that business team can manage these pages.
                 </li>
