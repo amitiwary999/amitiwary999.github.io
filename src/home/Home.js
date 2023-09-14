@@ -13,7 +13,7 @@ function Home(props) {
               <img src={image} className="profile-image img-responsive" />
               <div className="col my-auto">
                 <h1 className="text-md-left text-sm-center">Amit Tiwary</h1>
-                <h3 className="text-md-left" style={{color: 'grey'}}>Senior Software Developer</h3>
+                <h3 className="text-md-left" style={{color: 'grey'}}>Software Engineer</h3>
                 <div className="row">
                   <div className="ml-md-2 mx-auto">
                     <a
@@ -51,7 +51,7 @@ function Home(props) {
             <div className="card p-4">
               <p className="sections-title">About Me</p>
               <p>
-                I am a Senior Software Engineer with 5+ year of experience. Currently, I
+                I am a Software Engineer with 5+ year of experience. Currently, I
                 work at{" "}
                 <a href="https://www.viacom18.com/">
                   Viacom18, JioCinema team
